@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHER — guns.lol style</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, sans-serif;
+        }
+
+        :root {
+            --bg: #0f0f14;
+            --bg-card: #1a1a24;
+            --purple: #7928ca;
+            --purple-light: #9d4edd;
+            --text: #ffffff;
+            --text-gray: #a0a0b2;
+            --border: rgba(121, 40, 202, 0.25);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem 1.2rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* ===== HEADER — GUNS.LOL STYLE ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-card);
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--purple-light);
+        }
+
+        .logo-icon {
+            font-size: 1.6rem;
+        }
+
+        .menu-btn {
+            font-size: 1.5rem;
+            color: var(--purple-light);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ===== PROFILE CARD ===== */
+        .profile-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            border: 1px solid var(--border);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--purple), var(--purple-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--purple);
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .username {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== LIKE BUTTON ===== */
+        .like-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: rgba(121, 40, 202, 0.15);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            display: inline-flex;
+            margin-bottom: 0.5rem;
+        }
+
+        .like-btn {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .like-btn:hover { transform: scale(1.1); }
+        .like-btn.liked { color: #ff4757; }
+
+        .like-num {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--purple-light);
+        }
+
+        /* ===== LINKS — BUTTON STYLE ===== */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.1rem 1.5rem;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.25s ease;
+        }
+
+        .link-btn:hover {
+            border-color: var(--purple);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(121, 40, 202, 0.15);
+        }
+
+        .link-icon {
+            font-size: 1.4rem;
+            width: 32px;
+            text-align: center;
+        }
+
+        .link-text {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .arrow {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            padding-bottom: 2rem;
+        }
+
+        /* ===== ANIMATION ===== */
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== HEADER — GUNS.LOL STYLE ===== -->
+        <div class="header fade-in delay-1">
+            <div class="logo">
+                <span class="logo-icon">🔫</span>
+                <span>JHER</span>
+            </div>
+            <button class="menu-btn">☰</button>
+        </div>
+
+        <!-- ===== PROFILE ===== -->
+        <div class="profile-card fade-in delay-2">
+            <div class="avatar">👤</div>
+            <h1>JHER</h1>
+            <p class="username">@jhxrs.z</p>
+            <p class="bio">🎮 Roblox Developer • 🎵 Content Creator<br>Making cool things ✨</p>
+            
+            <div class="like-box">
+                <button class="like-btn" id="likeBtn" onclick="doLike()">🤍</button>
+                <span class="like-num" id="likeCount">0</span>
+            </div>
+        </div>
+
+        <!-- ===== TIKTOK ===== -->
+        <a href="https://tiktok.com/@jhxrs.z" target="_blank" class="link-btn fade-in delay-3">
+            <span class="link-icon">🎵</span>
+            <span class="link-text">TikTok</span>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- ===== ROBLOX ===== -->
+        <a href="https://roblox.com/users/YOUR_ROBLOX_ID/profile" target="_blank" class="link-btn fade-in delay-3">
+            <span class="link-icon">🎮</span>
+            <span class="link-text">Roblox</span>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- ===== DISCORD ===== -->
+        <a href="https://discord.gg/YOUR_SERVER" target="_blank" class="link-btn fade-in delay-4">
+            <span class="link-icon">💬</span>
+            <span class="link-text">Discord Server</span>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- ===== INSTAGRAM — PWEDE DAGDAG ===== -->
+        <!--
+        <a href="YOUR_INSTAGRAM" target="_blank" class="link-btn fade-in delay-4">
+            <span class="link-icon">📸</span>
+            <span class="link-text">Instagram</span>
+            <span class="arrow">→</span>
+        </a>
+        -->
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="fade-in delay-4">
+            <p>Powered by JHER 🛡️</p>
+            <p style="margin-top: 0.3rem;">© 2026 — All Rights Reserved</p>
+        </footer>
+
+    </div>
+
+    <!-- ===== LIKE SCRIPT ===== -->
+    <script>
+        let likes = localStorage.getItem('jher_likes') ? parseInt(localStorage.getItem('jher_likes')) : 0;
+        let liked = localStorage.getItem('jher_liked') === 'true';
+
+        const likeBtn = document.getElementById('likeBtn');
+        const likeCount = document.getElementById('likeCount');
+
+        function updateUI() {
+            likeCount.textContent = likes;
+            likeBtn.textContent = liked ? '❤️' : '🤍';
+            liked ? likeBtn.classList.add('liked') : likeBtn.classList.remove('liked');
+        }
+        updateUI();
+
+        function doLike() {
+            if (!liked) {
+                likes++;
+                liked = true;
+            } else {
+                likes--;
+                liked = false;
+            }
+            updateUI();
+            localStorage.setItem('jher_likes', likes);
+            localStorage.setItem('jher_liked', liked);
+        }
+    </script>
+</body>
+                                                                            </html>
+
